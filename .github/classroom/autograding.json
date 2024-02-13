@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "final test",
+      "setup": "make",
+      "run": "./tester -s",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 4,
+      "points": null
+    }
+  ]
+}
