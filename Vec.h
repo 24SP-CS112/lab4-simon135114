@@ -15,10 +15,24 @@ typedef double Item;
 class Vec {
    public:
 	Vec();
+   Vec(unsigned size);
+   Vec(const Vec& original);
+
+   unsigned getSize() const;
+   Item getItem(unsigned index) const;
+   void setItem(unsigned index, const Item& it);
+   Vec& operator=(const Vec& original);
+   void setSize(unsigned newSize);
+   bool operator==(const Vec& v2) const;
+   void writeTo(ostream& out) const;
+   void readFrom(istream& in);
+
+
 	virtual ~Vec();
 
    private:
-
+      unsigned mySize;
+      Item* myArray;
 };
 
 #endif /*VEC_H_*/
